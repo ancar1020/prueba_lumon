@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./assets/main.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <title>Document</title>
+</head>
+
+<body>
+
+   <div class="container">
+      <h1 class="text-center title mb-3">Capitalización</h1>
+      <div class="input-group mb-3">
+         <input id="input" type="text" name="input" class="form-control" placeholder="Escriba la palabra"
+            aria-label="Escriba la palabra" aria-describedby="button-addon2">
+         <div class="input-group-append">
+            <button class="btn btn-outline-primary" type="button" id="button-addon2"
+               onclick="capitalizeString()">Capitalizar</button>
+         </div>
+      </div>
+
+      <div class="mt-5 d-flex flex-row">
+         <h1 class="text-center title mr-3">Palabra capitalizada:</h1>
+         <h1 id="modified-string" class="title">
+         </h1>
+
+      </div>
+
+   </div>
+
+
+
+   <!--    Inclución js -->
+   <script src="./assets/main.js"></script>
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+   </script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+   </script>
+</body>
+
+</html>

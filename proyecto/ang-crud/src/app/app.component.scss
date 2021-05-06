@@ -1,0 +1,29 @@
+/* Kuler */
+$Kuler_pardalis-1-hex: #153F90;
+$Kuler_pardalis-2-hex: #235DA7;
+$Kuler_pardalis-3-hex: #2B84C6;
+$Kuler_pardalis-4-hex: #FFAB00;
+$Kuler_pardalis-5-hex: #453F42;
+$Kuler_pardalis-1-rgba: rgba(21, 63, 144, 1);
+$Kuler_pardalis-2-rgba: rgba(35, 93, 167, 1);
+$Kuler_pardalis-3-rgba: rgba(43, 132, 198, 1);
+$Kuler_pardalis-4-rgba: rgba(255, 171, 0, 1);
+$Kuler_pardalis-5-rgba: rgba(69, 63, 66, 1);
+$Kuler_pardalis-1-hsla: hsla(219, 74, 32, 1);
+$Kuler_pardalis-2-hsla: hsla(213, 65, 39, 1);
+$Kuler_pardalis-3-hsla: hsla(205, 64, 47, 1);
+$Kuler_pardalis-4-hsla: hsla(40, 100, 50, 1);
+$Kuler_pardalis-5-hsla: hsla(329, 4, 25, 1);
+
+
+/* fonts */
+$Open: 'Open Sans',
+sans-serif;
+$Oswald: 'Oswald',
+sans-serif;
+
+
+.title {
+  color: $Kuler_pardalis-1-hex;
+  font-family: $Oswald;
+}

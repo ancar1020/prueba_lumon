@@ -1,0 +1,94 @@
+<div class="container">
+  <h1 class="mt-5 text-uppercase text-center">{{title}}</h1>
+  <div class="mt-5">
+    <div class="alert alert-success alert-dismissible fade show" role="alert" *ngIf="msg">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        <span class="sr-only">Close</span>
+      </button>
+      <strong>{{msg}}</strong>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 col-lg-6">
+      <!-- form crear taks -->
+      <h2 class="mb-3">Crear Tarea</h2>
+      <form>
+        <div class="form-group">
+          <label for="name">Nombre</label>
+          <input type="text" class="form-control" id="name" name="name" [(ngModel)]="model.name"
+            placeholder="Escriba el nombre de la tarea">
+        </div>
+        <div class="form-group">
+          <label for="prioridad">Prioridad</label>
+          <input type="text" class="form-control" id="prioridad" name="prioridad" [(ngModel)]="model.prioridad"
+            placeholder="Alta, Media o Baja">
+        </div>
+        <div class="form-group">
+          <label for="responsable">Responsable</label>
+          <input type="text" class="form-control" id="prioridad" name="responsable" [(ngModel)]="model.responsable"
+            placeholder="Escriba el responsable">
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-success btn-block" (click)="addtaks()">Crear tarea</button>
+        </div>
+      </form>
+    </div>
+    <!-- form taks -->
+    <div class="col-12 col-lg-6">
+      <h2 class="mb-3">Tareas Creadas</h2>
+      <table class="table table-sm">
+        <thead>
+          <tr>
+            <th scope="col">Nombre Tarea</th>
+            <th scope="col">Prioridad</th>
+            <th scope="col">Responsable</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let taks of taks; let i = index">
+            <td>{{taks.name}}</td>
+            <td>{{taks.prioridad}}</td>
+            <td>{{taks.responsable}}</td>
+            <td>
+              <div class="btn-group" role="group" aria-label="Basic example">
+                <button class="btn btn-primary" (click)="editTaks(i)">Editar</button>
+                <button class="btn btn-danger" (click)="deleteTaks(i)">Borrar</button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 col-lg-6">
+      <!-- form crear taks -->
+      <h2 class="mb-3">Editar Tarea</h2>
+      <form>
+        <div class="form-group">
+          <label for="name">Nombre</label>
+          <input type="text" class="form-control" id="name" name="name" [(ngModel)]="model2.name"
+            placeholder="Escriba el nombre de la tarea">
+        </div>
+        <div class="form-group">
+          <label for="prioridad">Prioridad</label>
+          <input type="text" class="form-control" id="prioridad" name="prioridad" [(ngModel)]="model2.prioridad"
+            placeholder="Alta, Media o Baja">
+        </div>
+        <div class="form-group">
+          <label for="responsable">Responsable</label>
+          <input type="text" class="form-control" id="prioridad" name="responsable" [(ngModel)]="model2.responsable"
+            placeholder="Escriba el responsable">
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-success btn-block" (click)="updateTaks()">Editar tarea</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<router-outlet></router-outlet>
